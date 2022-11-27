@@ -17,5 +17,4 @@ public class Ball : MonoBehaviour
         Sprite sprite = _spriteController.ChangeSprite();
         _particleSystem.textureSheetAnimation.AddSprite(sprite);
     }
-
 }

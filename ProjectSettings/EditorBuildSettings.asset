@@ -96,15 +96,21 @@ EditorBuildSettings:
     path: Assets/TextMesh Pro/Examples & Extras/Scenes/_12a___Text_Interactions.unity
     guid: aa5ea379ea9904d46970b43e1fe43a0f
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: 
     guid: b2931ced5fe4f29488af2ab347d60325
   - enabled: 1
-    path: Assets/2DSimpleUIPack/Examples/Scenes/Mobile_Game_Example.unity
+    path: 
     guid: 783fd8ef7eceb1b4899267ed9d3ad4e5
   - enabled: 1
-    path: Assets/2DSimpleUIPack/Examples/Scenes/Main_Menu_Example.unity
+    path: Assets/Scenes/MainMenu.unity
     guid: d8dbd9e885bc7974993c14c34a942cc2
   - enabled: 1
-    path: Assets/2DSimpleUIPack/Examples/Scenes/Level_Select_Example.unity
+    path: Assets/Scenes/LevelSelect.unity
     guid: 90912e284b8a8d047832bce39f371797
+  - enabled: 1
+    path: Assets/Scenes/TimeOverScene.unity
+    guid: 7e8f45191d9ded144a12f63e820e15c6
+  - enabled: 1
+    path: Assets/Scenes/VictoryScene.unity
+    guid: 51cc500d05171d440a771ce580852069
   m_configObjects: {}
