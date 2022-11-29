@@ -1003,6 +1003,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _slingshot: {fileID: 1168635017}
+  _ballLifeDuration: 5
 --- !u!114 &687375208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1018,7 +1019,7 @@ MonoBehaviour:
   _rim: {fileID: 2003607104}
   _scoreCounter: {fileID: 687375205}
   _menuController: {fileID: 519420033}
-  _timeManager: {fileID: 687375209}
+  _timer: {fileID: 687375209}
 --- !u!114 &687375209
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1667,7 +1668,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.009000001, y: 0.75725937}
   m_AnchorMax: {x: 0.25300002, y: 0.86200005}
-  m_AnchoredPosition: {x: -133.47876, y: -43.5814}
+  m_AnchoredPosition: {x: -133.47876, y: -43.581398}
   m_SizeDelta: {x: 327.55695, y: 107.41293}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1529844025
