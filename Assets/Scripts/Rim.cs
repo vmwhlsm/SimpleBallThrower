@@ -10,13 +10,11 @@ using UnityEngine.Events;
 public class Rim : MonoBehaviour
 {
     private AudioSource _audioSource;
-    private Animator _animator;
     public event UnityAction Goaled;
 
     private void Start()
     {
         _audioSource = GetComponent<AudioSource>();
-        _animator = GetComponent<Animator>();
         Goaled += _audioSource.Play;
     }
     

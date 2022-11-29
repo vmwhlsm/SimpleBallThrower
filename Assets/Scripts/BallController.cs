@@ -7,16 +7,9 @@ using UnityEngine;
 public class BallController : MonoBehaviour
 {
     [SerializeField] private Slingshot _slingshot;
-
+    [SerializeField] float _ballLifeDuration = 5;
+    
     private readonly Dictionary<int, BallData> _dictionary = new();
-
-    private IEnumerator RemoveAfter(int id, float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-
-        var obj = _dictionary[id].Obj;
-        Destroy(obj);
-    }
 
     private void Start()
     {
@@ -34,7 +27,15 @@ public class BallController : MonoBehaviour
             dataRigidbody.isKinematic = false;
             dataRigidbody.AddForce(force);
 
-            StartCoroutine(RemoveAfter(id, 5f));
+            StartCoroutine(RemoveAfter(id, _ballLifeDuration));
         };
+    }
+    
+    private IEnumerator RemoveAfter(int id, float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+
+        var obj = _dictionary[id].Obj;
+        Destroy(obj);
     }
 }

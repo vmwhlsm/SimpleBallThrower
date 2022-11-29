@@ -5,7 +5,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class TimeManager : MonoBehaviour
+public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI _timeUi;
 

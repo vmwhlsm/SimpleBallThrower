@@ -9,19 +9,19 @@ public class GameManager : MonoBehaviour, ISceneLoadHandler<LevelConfig>
     [SerializeField] private Rim _rim;
     [SerializeField] private ScoreCounter _scoreCounter;
     [SerializeField] private MenuController _menuController;
-    [SerializeField] private TimeManager _timeManager;
+    [SerializeField] private Timer _timer;
     
     
     public void OnSceneLoaded(LevelConfig argument)
     {
-        _timeManager.SetTime(argument.TimeSec);
+        _timer.SetTime(argument.TimeSec);
         _scoreCounter.SetGoal(argument.Goal);
     }
     
     void Start()
     {
         _rim.Goaled += _scoreCounter.IncreaseScore;
-        _timeManager.TimeLeft += _menuController.LoadTimeOverScene;
+        _timer.TimeLeft += _menuController.LoadTimeOverScene;
         _scoreCounter.GoalRiched += _menuController.LoadVictoryScene;
     }
 
@@ -36,7 +36,7 @@ public class GameManager : MonoBehaviour, ISceneLoadHandler<LevelConfig>
     private void OnDestroy()
     {
         _rim.Goaled -= _scoreCounter.IncreaseScore;
-        _timeManager.TimeLeft -= _menuController.LoadTimeOverScene;
+        _timer.TimeLeft -= _menuController.LoadTimeOverScene;
         _scoreCounter.GoalRiched -= _menuController.LoadVictoryScene;
     }
 
